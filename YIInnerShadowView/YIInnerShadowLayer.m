@@ -32,10 +32,7 @@
                         [NSNull null], @"contents",
                         nil];
         
-        self.showsTopInnerShadow = YES;
-        self.showsBottomInnerShadow  = YES;
-        self.showsLeftInnerShadow = YES;
-        self.showsRightInnerShadow = YES;
+        self.shadowMask = YIInnerShadowMaskAll;
     }
     return self;
 }
@@ -44,10 +41,12 @@
 {
     [super layoutSublayers];
     
-    CGFloat top = (self.showsTopInnerShadow ? self.shadowRadius : 0);
-    CGFloat bottom = (self.showsBottomInnerShadow ? self.shadowRadius : 0);
-    CGFloat left = (self.showsLeftInnerShadow ? self.shadowRadius : 0);
-    CGFloat right = (self.showsRightInnerShadow ? self.shadowRadius : 0);
+    if (self.shadowMask == YIInnerShadowMaskNone) return;
+    
+    CGFloat top = (self.shadowMask & YIInnerShadowMaskTop ? self.shadowRadius : 0);
+    CGFloat bottom = (self.shadowMask & YIInnerShadowMaskBottom ? self.shadowRadius : 0);
+    CGFloat left = (self.shadowMask & YIInnerShadowMaskLeft ? self.shadowRadius : 0);
+    CGFloat right = (self.shadowMask & YIInnerShadowMaskRight ? self.shadowRadius : 0);
     
     CGRect largerRect = CGRectMake(self.bounds.origin.x - left,
                                    self.bounds.origin.y - top,

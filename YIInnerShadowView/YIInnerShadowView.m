@@ -46,4 +46,58 @@
     _innerShadowLayer.frame = self.layer.bounds;
 }
 
+#pragma mark -
+
+#pragma mark Accessors
+
+- (YIInnerShadowMask)shadowMask
+{
+    return _innerShadowLayer.shadowMask;
+}
+
+- (void)setShadowMask:(YIInnerShadowMask)shadowMask
+{
+    _innerShadowLayer.shadowMask = shadowMask;
+}
+
+- (UIColor *)shadowColor
+{
+    return [UIColor colorWithCGColor:_innerShadowLayer.shadowColor];
+}
+
+- (void)setShadowColor:(UIColor *)shadowColor
+{
+    _innerShadowLayer.shadowColor = shadowColor.CGColor;
+}
+
+- (CGFloat)shadowOpacity
+{
+    return _innerShadowLayer.shadowOpacity;
+}
+
+- (void)setShadowOpacity:(CGFloat)shadowOpacity
+{
+    _innerShadowLayer.shadowOpacity = shadowOpacity;
+}
+
+- (CGSize)shadowOffset
+{
+    return _innerShadowLayer.shadowOffset;
+}
+
+- (void)setShadowOffset:(CGSize)shadowOffset
+{
+    _innerShadowLayer.shadowOffset = shadowOffset;
+}
+
+- (CGFloat)shadowRadius
+{
+    return _innerShadowLayer.shadowRadius;
+}
+
+- (void)setShadowRadius:(CGFloat)shadowRadius
+{
+    _innerShadowLayer.shadowRadius = shadowRadius;
+}
+
 @end

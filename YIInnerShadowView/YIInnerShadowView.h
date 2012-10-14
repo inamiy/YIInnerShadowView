@@ -14,4 +14,11 @@
 
 @property (nonatomic, strong, readonly) YIInnerShadowLayer* innerShadowLayer;
 
+@property (nonatomic) YIInnerShadowMask shadowMask;
+
+@property (nonatomic, strong) UIColor* shadowColor;
+@property (nonatomic)         CGFloat  shadowOpacity;
+@property (nonatomic)         CGSize   shadowOffset;
+@property (nonatomic)         CGFloat  shadowRadius;
+
 @end
