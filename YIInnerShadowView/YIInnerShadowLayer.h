@@ -15,4 +15,9 @@
 //
 @interface YIInnerShadowLayer : CAShapeLayer
 
+@property (nonatomic) BOOL showsTopInnerShadow;
+@property (nonatomic) BOOL showsBottomInnerShadow;
+@property (nonatomic) BOOL showsLeftInnerShadow;
+@property (nonatomic) BOOL showsRightInnerShadow;
+
 @end
