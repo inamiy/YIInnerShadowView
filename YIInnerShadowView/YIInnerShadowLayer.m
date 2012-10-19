@@ -27,12 +27,6 @@
         // Causes the inner region in this example to NOT be filled.
         [self setFillRule:kCAFillRuleEvenOdd];
         
-        self.actions = [NSDictionary dictionaryWithObjectsAndKeys:
-                        [NSNull null], @"position",
-                        [NSNull null], @"bounds",
-                        [NSNull null], @"contents",
-                        nil];
-        
         self.shadowMask = YIInnerShadowMaskAll;
         
     }
