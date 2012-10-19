@@ -14,7 +14,8 @@
 {
     self = [super init];
     if (self) {
-
+        
+        self.masksToBounds = YES;
         self.needsDisplayOnBoundsChange = YES;
         
         // Standard shadow stuff
@@ -33,6 +34,7 @@
                         nil];
         
         self.shadowMask = YIInnerShadowMaskAll;
+        
     }
     return self;
 }
@@ -62,8 +64,6 @@
     CGPathCloseSubpath(path);
     
     [self setPath:path];
-    
-    self.masksToBounds = YES;
 }
 
 #pragma mark -

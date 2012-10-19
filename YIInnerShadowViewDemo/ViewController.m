@@ -60,7 +60,6 @@
 
 - (IBAction)handleSlider:(UISlider*)sender
 {
-    NSLog(@"shadowRadius---> %f",sender.value);
     _innerShadowView.shadowRadius = sender.value;
 }
 

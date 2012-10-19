@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -12,29 +12,22 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NM-Ko-J3k" customClass="YIInnerShadowView">
+                            <view contentMode="scaleToFill" id="5NM-Ko-J3k" customClass="YIInnerShadowView">
+                                <rect key="frame" x="10" y="161" width="300" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inner Shadow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9o-3M-YPc">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="175" id="1DN-IF-wTO"/>
-                                            <constraint firstAttribute="height" constant="40" id="xyd-X6-Ifc"/>
-                                        </constraints>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inner Shadow" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N9o-3M-YPc">
+                                        <rect key="frame" x="63" y="30" width="175" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="N9o-3M-YPc" firstAttribute="centerY" secondItem="5NM-Ko-J3k" secondAttribute="centerY" type="default" id="0UV-I2-keB"/>
-                                    <constraint firstAttribute="height" constant="100" type="user" id="VmZ-vp-6f1"/>
-                                    <constraint firstItem="N9o-3M-YPc" firstAttribute="centerX" secondItem="5NM-Ko-J3k" secondAttribute="centerX" type="default" id="qbA-M4-6PN"/>
-                                </constraints>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8tR-3g-1hi">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="GXj-tG-CHj"/>
-                                </constraints>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="8tR-3g-1hi">
+                                <rect key="frame" x="10" y="297" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="None"/>
                                     <segment title="Top"/>
@@ -46,23 +39,15 @@
                                     <action selector="handleSegmentedControl:" destination="2" eventType="valueChanged" id="epU-lg-uz3"/>
                                 </connections>
                             </segmentedControl>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="KWG-bd-Xbq">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="20" id="KWG-bd-Xbq">
+                                <rect key="frame" x="8" y="365" width="304" height="23"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="handleSlider:" destination="2" eventType="valueChanged" id="sXh-16-ODm"/>
                                 </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="KWG-bd-Xbq" firstAttribute="trailing" secondItem="8tR-3g-1hi" secondAttribute="trailing" type="default" id="35r-lL-LXB"/>
-                            <constraint firstAttribute="bottom" secondItem="KWG-bd-Xbq" secondAttribute="bottom" constant="161" id="C8E-fc-Isd"/>
-                            <constraint firstItem="KWG-bd-Xbq" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="GbE-9f-3v1"/>
-                            <constraint firstItem="8tR-3g-1hi" firstAttribute="trailing" secondItem="5NM-Ko-J3k" secondAttribute="trailing" type="default" id="HRl-9c-YR8"/>
-                            <constraint firstItem="KWG-bd-Xbq" firstAttribute="leading" secondItem="8tR-3g-1hi" secondAttribute="leading" type="default" id="VKj-NA-82G"/>
-                            <constraint firstAttribute="bottom" secondItem="8tR-3g-1hi" secondAttribute="bottom" constant="222" id="ZIZ-RW-OTN"/>
-                            <constraint firstItem="5NM-Ko-J3k" firstAttribute="top" secondItem="3" secondAttribute="top" constant="161" id="Zq5-mU-OxD"/>
-                            <constraint firstItem="8tR-3g-1hi" firstAttribute="leading" secondItem="5NM-Ko-J3k" secondAttribute="leading" type="default" id="i44-3f-33F"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -70,9 +55,6 @@
         </scene>
     </scenes>
     <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
