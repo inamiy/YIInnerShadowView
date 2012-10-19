@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2840" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1926"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -31,12 +31,37 @@
                                     <constraint firstItem="N9o-3M-YPc" firstAttribute="centerX" secondItem="5NM-Ko-J3k" secondAttribute="centerX" type="default" id="qbA-M4-6PN"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8tR-3g-1hi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="GXj-tG-CHj"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="None"/>
+                                    <segment title="Top"/>
+                                    <segment title="Vertical"/>
+                                    <segment title="Horizontal"/>
+                                    <segment title="All"/>
+                                </segments>
+                                <connections>
+                                    <action selector="handleSegmentedControl:" destination="2" eventType="valueChanged" id="epU-lg-uz3"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="KWG-bd-Xbq">
+                                <connections>
+                                    <action selector="handleSlider:" destination="2" eventType="valueChanged" id="sXh-16-ODm"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="5NM-Ko-J3k" firstAttribute="centerY" secondItem="3" secondAttribute="centerY" type="default" id="4eh-TS-cX5"/>
-                            <constraint firstItem="5NM-Ko-J3k" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="aGT-cp-1Nu"/>
-                            <constraint firstItem="5NM-Ko-J3k" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="10" id="ebd-ed-NUJ"/>
+                            <constraint firstItem="KWG-bd-Xbq" firstAttribute="trailing" secondItem="8tR-3g-1hi" secondAttribute="trailing" type="default" id="35r-lL-LXB"/>
+                            <constraint firstAttribute="bottom" secondItem="KWG-bd-Xbq" secondAttribute="bottom" constant="161" id="C8E-fc-Isd"/>
+                            <constraint firstItem="KWG-bd-Xbq" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="GbE-9f-3v1"/>
+                            <constraint firstItem="8tR-3g-1hi" firstAttribute="trailing" secondItem="5NM-Ko-J3k" secondAttribute="trailing" type="default" id="HRl-9c-YR8"/>
+                            <constraint firstItem="KWG-bd-Xbq" firstAttribute="leading" secondItem="8tR-3g-1hi" secondAttribute="leading" type="default" id="VKj-NA-82G"/>
+                            <constraint firstAttribute="bottom" secondItem="8tR-3g-1hi" secondAttribute="bottom" constant="222" id="ZIZ-RW-OTN"/>
+                            <constraint firstItem="5NM-Ko-J3k" firstAttribute="top" secondItem="3" secondAttribute="top" constant="161" id="Zq5-mU-OxD"/>
+                            <constraint firstItem="8tR-3g-1hi" firstAttribute="leading" secondItem="5NM-Ko-J3k" secondAttribute="leading" type="default" id="i44-3f-33F"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -50,6 +75,10 @@
         </class>
         <class className="ViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="handleSegmentedControl:" candidateClass="UISegmentedControl"/>
+                <relationship kind="action" name="handleSlider:" candidateClass="UISlider"/>
+            </relationships>
         </class>
         <class className="YIInnerShadowView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/YIInnerShadowView.h"/>

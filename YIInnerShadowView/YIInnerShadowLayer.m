@@ -41,8 +41,6 @@
 {
     [super layoutSublayers];
     
-    if (self.shadowMask == YIInnerShadowMaskNone) return;
-    
     CGFloat top = (self.shadowMask & YIInnerShadowMaskTop ? self.shadowRadius : 0);
     CGFloat bottom = (self.shadowMask & YIInnerShadowMaskBottom ? self.shadowRadius : 0);
     CGFloat left = (self.shadowMask & YIInnerShadowMaskLeft ? self.shadowRadius : 0);
@@ -66,6 +64,40 @@
     [self setPath:path];
     
     self.masksToBounds = YES;
+}
+
+#pragma mark -
+
+#pragma mark Accessors
+
+- (void)setShadowMask:(YIInnerShadowMask)shadowMask
+{
+    _shadowMask = shadowMask;
+    [self setNeedsLayout];
+}
+
+- (void)setShadowColor:(CGColorRef)shadowColor
+{
+    [super setShadowColor:shadowColor];
+    [self setNeedsLayout];
+}
+
+- (void)setShadowOpacity:(CGFloat)shadowOpacity
+{
+    [super setShadowOpacity:shadowOpacity];
+    [self setNeedsLayout];
+}
+
+- (void)setShadowOffset:(CGSize)shadowOffset
+{
+    [super setShadowOffset:shadowOffset];
+    [self setNeedsLayout];
+}
+
+- (void)setShadowRadius:(CGFloat)shadowRadius
+{
+    [super setShadowRadius:shadowRadius];
+    [self setNeedsLayout];
 }
 
 @end

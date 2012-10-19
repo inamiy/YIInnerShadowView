@@ -10,4 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)handleSegmentedControl:(UISegmentedControl*)sender;
+- (IBAction)handleSlider:(UISlider*)sender;
+
 @end

@@ -14,21 +14,54 @@
 @end
 
 @implementation ViewController
+{
+    YIInnerShadowView* _innerShadowView;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    // access directly to innerShadowLayer if you want to change its properties
-    YIInnerShadowView* innerShadowView = (id)self.view.subviews[0];
-    innerShadowView.innerShadowLayer.shadowRadius = 20;
+    // storyboard settings
+    _innerShadowView = (id)self.view.subviews[0];
+    _innerShadowView.shadowRadius = 5;
+    _innerShadowView.shadowMask = YIInnerShadowMaskNone;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)handleSegmentedControl:(UISegmentedControl*)sender
+{
+    switch (sender.selectedSegmentIndex) {
+        case 1:
+            _innerShadowView.shadowMask = YIInnerShadowMaskTop;
+            break;
+        case 2:
+            _innerShadowView.shadowMask = YIInnerShadowMaskVertical;
+            break;
+        case 3:
+            _innerShadowView.shadowMask = YIInnerShadowMaskHorizontal;
+            break;
+        case 4:
+            _innerShadowView.shadowMask = YIInnerShadowMaskAll;
+            break;
+        case 0:
+        default:
+            _innerShadowView.shadowMask = YIInnerShadowMaskNone;
+            break;
+    }
+    
+}
+
+- (IBAction)handleSlider:(UISlider*)sender
+{
+    NSLog(@"shadowRadius---> %f",sender.value);
+    _innerShadowView.shadowRadius = sender.value;
 }
 
 @end
