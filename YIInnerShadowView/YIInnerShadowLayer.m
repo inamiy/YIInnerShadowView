@@ -58,6 +58,8 @@
     CGPathCloseSubpath(path);
     
     [self setPath:path];
+    
+    CGPathRelease(path);
 }
 
 #pragma mark -
