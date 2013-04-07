@@ -17,6 +17,7 @@
         
         self.masksToBounds = YES;
         self.needsDisplayOnBoundsChange = YES;
+				self.shouldRasterize = YES;
         
         // Standard shadow stuff
         [self setShadowColor:[[UIColor colorWithWhite:0 alpha:1] CGColor]];
