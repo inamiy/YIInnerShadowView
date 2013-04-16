@@ -126,7 +126,8 @@
 				1F3CF72D162AF0FD0066B5CB /* YIInnerShadowLayer.h */,
 				1F3CF72E162AF0FD0066B5CB /* YIInnerShadowLayer.m */,
 			);
-			path = YIInnerShadowView;
+			name = YIInnerShadowView;
+			path = ../Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
