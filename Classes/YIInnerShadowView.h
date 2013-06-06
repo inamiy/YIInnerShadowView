@@ -21,4 +21,6 @@
 @property (nonatomic)         CGSize   shadowOffset;
 @property (nonatomic)         CGFloat  shadowRadius;
 
+@property (nonatomic)         CGFloat  cornerRadius;
+
 @end
