@@ -31,6 +31,7 @@
                                  nil];
     
     [self.layer addSublayer:_innerShadowLayer];
+    self.layer.masksToBounds = YES;
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -109,6 +110,17 @@
 - (void)setShadowRadius:(CGFloat)shadowRadius
 {
     _innerShadowLayer.shadowRadius = shadowRadius;
+}
+
+- (CGFloat)cornerRadius;
+{
+    return _innerShadowLayer.cornerRadius;
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius;
+{
+    self.layer.cornerRadius = cornerRadius;
+    _innerShadowLayer.cornerRadius = cornerRadius;
 }
 
 @end

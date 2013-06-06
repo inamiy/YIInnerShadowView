@@ -55,7 +55,14 @@
     // Add the inner path so it's subtracted from the outer path.
     // someInnerPath could be a simple bounds rect, or maybe
     // a rounded one for some extra fanciness.
-    CGPathAddPath(path, NULL, [UIBezierPath bezierPathWithRect:self.bounds].CGPath);
+    CGFloat cornerRadius = self.cornerRadius;
+    UIBezierPath *bezier;
+    if (cornerRadius) {
+        bezier = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:cornerRadius];
+    } else {
+        bezier = [UIBezierPath bezierPathWithRect:self.bounds];
+    }
+    CGPathAddPath(path, NULL, bezier.CGPath);
     CGPathCloseSubpath(path);
     
     [self setPath:path];
