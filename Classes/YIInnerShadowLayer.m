@@ -104,4 +104,10 @@
     [self setNeedsLayout];
 }
 
+- (void)setCornerRadius:(CGFloat)cornerRadius
+{
+    [super setCornerRadius:cornerRadius];
+    [self setNeedsLayout];
+}
+
 @end
