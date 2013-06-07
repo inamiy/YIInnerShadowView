@@ -25,8 +25,9 @@
     
     // storyboard settings
     _innerShadowView = (id)self.view.subviews[0];
-    _innerShadowView.shadowRadius = 5;
-    _innerShadowView.shadowMask = YIInnerShadowMaskNone;
+    _innerShadowView.shadowRadius = 10;
+    _innerShadowView.cornerRadius = 0;
+    _innerShadowView.shadowMask = YIInnerShadowMaskAll;
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,9 +59,14 @@
     
 }
 
-- (IBAction)handleSlider:(UISlider*)sender
+- (IBAction)handleShadowRadiusSlider:(UISlider*)sender
 {
     _innerShadowView.shadowRadius = sender.value;
+}
+
+- (IBAction)handleCornerRadiusSlider:(UISlider*)sender
+{
+    _innerShadowView.cornerRadius = sender.value;
 }
 
 @end

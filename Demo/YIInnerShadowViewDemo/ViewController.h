@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController
 
 - (IBAction)handleSegmentedControl:(UISegmentedControl*)sender;
-- (IBAction)handleSlider:(UISlider*)sender;
+
+- (IBAction)handleShadowRadiusSlider:(UISlider*)sender;
+- (IBAction)handleCornerRadiusSlider:(UISlider*)sender;
 
 @end
