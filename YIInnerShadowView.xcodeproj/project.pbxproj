@@ -17,8 +17,8 @@
 		F4845D6B1C73B19800790983 /* YIInnerShadowView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YIInnerShadowView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4845D6E1C73B19800790983 /* YIInnerShadowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YIInnerShadowView.h; sourceTree = "<group>"; };
 		F4845D701C73B19800790983 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F4845D761C73B1D800790983 /* YIInnerShadowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YIInnerShadowLayer.h; path = ../../Classes/YIInnerShadowLayer.h; sourceTree = "<group>"; };
-		F4845D771C73B1D800790983 /* YIInnerShadowLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YIInnerShadowLayer.m; path = ../../Classes/YIInnerShadowLayer.m; sourceTree = "<group>"; };
+		F4845D761C73B1D800790983 /* YIInnerShadowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YIInnerShadowLayer.h; path = ../Classes/YIInnerShadowLayer.h; sourceTree = "<group>"; };
+		F4845D771C73B1D800790983 /* YIInnerShadowLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YIInnerShadowLayer.m; path = ../Classes/YIInnerShadowLayer.m; sourceTree = "<group>"; };
 		F4845D7A1C73B23900790983 /* YIInnerShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YIInnerShadowView.m; path = Classes/YIInnerShadowView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -287,6 +287,7 @@
 				F4845D751C73B19800790983 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
