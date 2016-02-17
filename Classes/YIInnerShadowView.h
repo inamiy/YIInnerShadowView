@@ -2,11 +2,18 @@
 //  YIInnerShadowView.h
 //  YIInnerShadowView
 //
-//  Created by Yasuhiro Inami on 2012/10/14.
-//  Copyright (c) 2012年 Yasuhiro Inami. All rights reserved.
+//  Created by María Eugenia Sakuda on 2/16/16.
+//  Copyright © 2016 inamiy. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+
+//! Project version number for YIInnerShadowView.
+FOUNDATION_EXPORT double YIInnerShadowViewVersionNumber;
+
+//! Project version string for YIInnerShadowView.
+FOUNDATION_EXPORT const unsigned char YIInnerShadowViewVersionString[];
+
 #import <QuartzCore/QuartzCore.h>
 #import "YIInnerShadowLayer.h"
 

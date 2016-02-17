@@ -52,13 +52,14 @@
 		F4845D6D1C73B19800790983 /* YIInnerShadowView */ = {
 			isa = PBXGroup;
 			children = (
-				F4845D7A1C73B23900790983 /* YIInnerShadowView.m */,
 				F4845D761C73B1D800790983 /* YIInnerShadowLayer.h */,
 				F4845D771C73B1D800790983 /* YIInnerShadowLayer.m */,
 				F4845D6E1C73B19800790983 /* YIInnerShadowView.h */,
+				F4845D7A1C73B23900790983 /* YIInnerShadowView.m */,
 				F4845D701C73B19800790983 /* Info.plist */,
 			);
-			path = YIInnerShadowView;
+			name = YIInnerShadowView;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +244,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = YIInnerShadowView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Classes/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inamiy.YIInnerShadowView;
@@ -259,7 +260,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = YIInnerShadowView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Classes/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inamiy.YIInnerShadowView;
